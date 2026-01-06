@@ -1,59 +1,156 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Istanbul Transport Map
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Realtime visualization of Istanbul’s unofficial transit network — showing **live bus positions** mapped over a **TomTom interactive map** using public APIs.
 
-## About Laravel
+## 🚍 Overview
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+**Istanbul Transport Map** is an open-source project that provides a **real-time interactive map** of Istanbul buses and transit routes. It fetches live vehicle positions from transit APIs and overlays them on a **TomTom map**, allowing users to see where buses are at any given moment.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+The goal of this project is to make Istanbul’s dynamic and unofficial transit movements easier to explore beyond static maps.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 🚀 Features
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+### 🌐 Interactive Map
+- Powered by **TomTom Maps SDK**
+- Pan, zoom, and explore Istanbul interactively
+- Route and vehicle overlays
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 🚍 Real-Time Bus Tracking
+- Live bus positions fetched from transit APIs
+- Automatic updates without page refresh
+- Visual markers for active buses
 
-## Laravel Sponsors
+### 🔄 API Integration
+- Fetches real-time transit data
+- Normalizes and processes vehicle positions
+- Sends optimized data to the frontend
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+---
 
-### Premium Partners
+## 🛠️ Tech Stack
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+- **Map Provider:** TomTom Maps SDK  
+- **Frontend:** JavaScript  
+- **Backend:** Node.js  
+- **Data Source:** Transit / bus location APIs  
+- **Realtime Updates:** Polling or websocket-based updates  
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## 📦 Installation
 
-## Code of Conduct
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/toprakbirben/istanbul-transport-map
+cd istanbul-transport-map
+```
+### 2️⃣ Install Dependencies
+```bash
+composer install
+```
+### 3️⃣ Configure Environment Variables
+Create a .env file and add your TomTom API key
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+### 4️⃣ Run the project
+php artisan serve
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 🧠 How It Works
+1.	Transit APIs provide real-time bus location data.
+2.	The backend fetches and processes this data.
+3.	The frontend renders buses as markers on a TomTom map.
+4.	Data refreshes continuously to show live movement.
 
-## Security Vulnerabilities
+### 📌 Usage
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Once running, open your browser and you will see:
+1.	Live bus positions
+2.	Interactive city map
+3.	Continuously updating transit movement
 
-## License
+Users can visually track buses in real time across Istanbul.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+***
+
+# İstanbul Ulaşım Haritası
+
+İstanbul’un resmi olmayan toplu taşıma ağını **gerçek zamanlı** olarak görselleştiren bir proje — canlı otobüs konumları **TomTom interaktif haritası** üzerinde API’ler aracılığıyla gösterilir.
+
+---
+
+## 🚍 Genel Bakış
+
+**İstanbul Ulaşım Haritası**, İstanbul’daki otobüslerin ve toplu taşıma hatlarının **gerçek zamanlı etkileşimli haritasını** sunan açık kaynaklı bir projedir. Otobüslerin konum verilerini toplu taşıma API’lerinden alır ve bu verileri **TomTom haritası** üzerinde gösterir. Böylece kullanıcılar otobüslerin nerede olduğunu anlık olarak görebilir.
+
+Projenin amacı, İstanbul’un dinamik ve resmi olmayan ulaşım hareketlerini, statik haritaların ötesinde daha kolay keşfedilebilir hale getirmektir.
+
+---
+
+## 🚀 Özellikler
+
+### 🌐 Etkileşimli Harita
+- **TomTom Maps SDK** ile oluşturulmuştur  
+- İstanbul’u yakınlaştırıp uzaklaştırarak ve kaydırarak keşfetme  
+- Hatlar ve araç konumları katmanları  
+
+### 🚍 Gerçek Zamanlı Otobüs Takibi
+- Canlı otobüs konumları toplu taşıma API’lerinden çekilir  
+- Sayfa yenilemeden otomatik güncellenir  
+- Harita üzerinde aktif otobüsler işaretlenir  
+
+### 🔄 API Entegrasyonu
+- Gerçek zamanlı toplu taşıma verileri alınır  
+- Araç konumları normalize edilip işlenir  
+- Frontend’e optimize edilmiş şekilde aktarılır  
+
+---
+
+## 🛠️ Kullanılan Teknolojiler
+
+- **Harita Sağlayıcısı:** TomTom Maps SDK  
+- **Frontend:** JavaScript  
+- **Backend:** PHP / Laravel  
+- **Veri Kaynağı:** Toplu taşıma / otobüs konum API’leri  
+- **Gerçek Zamanlı Güncelleme:** Polling veya WebSocket  
+
+---
+
+## 📦 Kurulum
+
+### 1️⃣ Depoyu klonlayın
+```bash
+git clone https://github.com/toprakbirben/istanbul-transport-map
+cd istanbul-transport-map
+```
+### 2️⃣ Bagimliliklari yukleyin
+```bash
+composer install
+```
+### 3️⃣ Ortam degiskenlerini olusturun
+.env dosyasini olusturun ve TomTom API anahtarinizi ekleyin
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+### 4️⃣ Projeyi calistirin
+php artisan serve
+
+### 🧠 Nasıl Çalışır?
+1.	Toplu taşıma API’leri otobüslerin gerçek zamanlı konum verilerini sağlar.
+2.	Backend bu verileri alır ve işler.
+3.	Frontend, otobüsleri TomTom haritası üzerinde işaretleyici olarak gösterir.
+4.	Veriler sürekli güncellenir ve canlı hareket görüntülenir.
+
+### 📌 Kullanım
+Proje çalıştıktan sonra tarayıcınızı açtığınızda şunları görebilirsiniz:
+1.	Canlı otobüs konumları
+2.	Etkileşimli şehir haritası
+3.	Sürekli güncellenen toplu taşıma hareketleri
+
+
+Kullanıcılar İstanbul’daki otobüsleri gerçek zamanlı olarak takip edebilir.

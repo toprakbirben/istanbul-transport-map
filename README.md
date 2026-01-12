@@ -57,7 +57,9 @@ cp .env.example .env
 php artisan key:generate
 ```
 ### 4️⃣ Run the project
+```bash
 php artisan serve
+```
 
 ### 🧠 How It Works
 1.	Transit APIs provide real-time bus location data.
@@ -138,7 +140,9 @@ cp .env.example .env
 php artisan key:generate
 ```
 ### 4️⃣ Projeyi calistirin
+```bash
 php artisan serve
+```
 
 ### 🧠 Nasıl Çalışır?
 1.	Toplu taşıma API’leri otobüslerin gerçek zamanlı konum verilerini sağlar.
